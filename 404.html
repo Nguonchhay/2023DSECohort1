@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap">
+    <style>
+        body {
+            background: linear-gradient(176deg, rgb(18, 24, 27) 50%, rgb(32, 39, 55) 100%);
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: "Rubik Mono One", monospace;
+        }
+        .image-container {
+            position: relative;
+            width: 90%; /* Set your preferred width, you can use relative units */
+            max-width: 480px; /* Add max-width to limit the container size */
+            height: auto; /* Remove fixed height */
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: -10px 0; /* Shift the image to the right */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container.loaded img {
+            opacity: 1;
+        }
+        .text-404 {
+            font-size: 5vw; /* Use relative font size */
+            color: red;
+            margin-bottom: 20px;
+        }
+        .text-4xl {
+            font-size: 3vw; /* Use relative font size */
+        }
+        .font-mono {
+            font-family: "Rubik Mono One", monospace;
+        }
+
+        /* Add media queries for different screen sizes */
+        @media screen and (max-width: 768px) {
+            .text-404 {
+                font-size: 30vw; /* Adjust the font size for smaller screens */
+            }
+            .text-4xl {
+                font-size: 7vw; /* Adjust the font size for smaller screens */
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.image-container').classList.add('loaded');
+        });
+    </script>
+</head>
+<body>
+    <div class="text-404">404</div>
+    <div class="text-4xl mb-0 font-bold font-mono">ARE YOU LOST 🥺</div>
+    <div class="image-container">
+        <img
+            src="https://i.giphy.com/media/1EmBoG0IL50VIJLWTs/giphy.gif"
+            alt="GIF"
+            loading="lazy">
+    </div>
+</body>
+</html>
